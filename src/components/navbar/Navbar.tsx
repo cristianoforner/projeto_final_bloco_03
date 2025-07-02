@@ -1,4 +1,5 @@
 import { UserIcon, ShoppingCartIcon } from "@phosphor-icons/react"
+import { Link } from "react-router-dom"
 
 function Navbar() {
     return (
@@ -7,7 +8,9 @@ function Navbar() {
             			   bg-gray-900 text-white'>
             
                 <div className="container flex justify-between text-lg">
-                    <img className="w-[208px] h-[79.35]" src="logo.png"/>
+                    <Link to='/'>
+                        <img className="w-[208px] h-[79.35]" src="logo.png"/>
+                    </Link>
 
                     <div className="flex items-center flex-1 max-w-md mx-4 gap-2">
                         <input
@@ -37,8 +40,8 @@ function Navbar() {
 
                     <div className='flex gap-4 items-center'>
                         <div className="flex gap-8 px-8 ">
-                        <p>Categorias</p>
-                        <p>Cadastrar Categoria</p>
+                        <Link to='/categorias' className='hover:underline'>Categorias</Link>
+                        <Link to='/cadastrarcategoria' className='hover:underline'>Cadastrar categoria</Link>
                         </div>
                         <UserIcon size={36} weight="regular" />
                         <ShoppingCartIcon size={36} weight="regular" />
